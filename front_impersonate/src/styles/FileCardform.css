@@ -1,0 +1,51 @@
+.file-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.file-card-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 50%; /* 원형 이미지를 만들기 위해 */
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.file-card-info {
+    flex: 1;
+}
+
+.file-card-name {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.file-card-role {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+.file-card-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.file-card-button:hover {
+    background-color: #0056b3;
+}
+
+/* 마우스를 올리면 흑백에서 색상으로 변환 */
+.file-card:hover .file-card-image {
+    filter: grayscale(0%);
+}
