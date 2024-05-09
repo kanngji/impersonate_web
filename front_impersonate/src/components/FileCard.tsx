@@ -1,5 +1,6 @@
 // 파일리스트에 등록된 파일카드자료
-import React from 'react';
+import React , {useState} from 'react';
+import RecordComponent from './RecordComponent';
 import '../styles/FileCardform.css'
 
 // Props 타입 정의
@@ -12,6 +13,8 @@ interface FileCardProps {
 }
 
 const FileCard: React.FC<FileCardProps> = ({imageSrc,name,role,audioSrc}) => {
+    // 음성 녹음
+    
     // 음성 파일 재생 함수
     const playAudio = () => {
         const audio = new Audio(audioSrc);
@@ -26,6 +29,9 @@ const FileCard: React.FC<FileCardProps> = ({imageSrc,name,role,audioSrc}) => {
                 <p className="file-card-role">{role != null ? role : '없음'}</p>
                 <button className="file-card-button" onClick={playAudio}>음성 재생</button>
             </div>
+
+            <RecordComponent/>
+            
         </div>
         
 
