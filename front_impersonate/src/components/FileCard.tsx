@@ -2,6 +2,7 @@
 import React , {useState} from 'react';
 import RecordComponent from './RecordComponent';
 import '../styles/FileCardform.css'
+import AudioRecord from './AudioRecord';
 
 // Props 타입 정의
 interface FileCardProps {
@@ -30,7 +31,7 @@ const FileCard: React.FC<FileCardProps> = ({imageSrc,name,role,audioSrc}) => {
                 <button className="file-card-button" onClick={playAudio}>음성 재생</button>
             </div>
 
-            <RecordComponent/>
+            <AudioRecord/>
             
         </div>
         
