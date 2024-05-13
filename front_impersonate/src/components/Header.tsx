@@ -10,6 +10,7 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import SearchIcon from '@mui/icons-material/Search';
 import { useNavigate } from "react-router-dom";
 import FileUploadIcon from '@mui/icons-material/FileUpload';
+import LoginIcon from '@mui/icons-material/Login';
 
 
 interface HeaderProps {
@@ -36,7 +37,9 @@ const Header: React.FC<HeaderProps> = ({ }) => {
   const handleDonate = () => {
     navigate("/donate")
   }
-
+  const handleLogin = () => {
+    navigate("/login")
+  }
   
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -58,6 +61,7 @@ const Header: React.FC<HeaderProps> = ({ }) => {
           <Button color="inherit" onClick={handleFileUpload}><FileUploadIcon/>파일업로드</Button>
           <Button color="inherit" onClick={handleDonate}><AttachMoneyIcon/>후원하기</Button>
           <Button color="inherit" onClick={handleContactUs}><EmailIcon/>문의하기</Button>
+          <Button color="inherit" onClick={handleLogin}><LoginIcon/>로그인</Button>
         </Toolbar>
       </AppBar>
     </Box>
