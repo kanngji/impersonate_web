@@ -1,11 +1,13 @@
 import React, {useState} from 'react';
 import '../styles/Loginform.css'
+import { useNavigate } from 'react-router-dom';
 
 interface LoginForm {
     id: string;
     password: string;
 }
 const LoginComponent = () => {
+    const navigate = useNavigate()
     const [formData, setFormData] = useState<LoginForm>({
         id:'',
         password:'',
@@ -23,7 +25,7 @@ const LoginComponent = () => {
 
     const handleSignUp = () =>{
         // 회원가입 페이지로 이동하는 로직을 여기에 추가
-        
+        navigate("/signup")
     }
 
 

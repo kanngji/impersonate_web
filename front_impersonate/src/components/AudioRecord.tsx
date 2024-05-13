@@ -1,3 +1,4 @@
+import Button from "@mui/material/Button";
 import React, { useState, useCallback } from "react";
 
 const AudioRecord: React.FC = () => {
@@ -86,8 +87,11 @@ const AudioRecord: React.FC = () => {
 
   return (
     <>
-      <button onClick={onRec ? onRecAudio : offRecAudio}>녹음</button>
-      <button onClick={onSubmitAudioFile}>결과 확인</button>
+      <div style={{ display: 'flex', gap: '5px' }}>
+        <Button variant="contained" color="error" onClick={onRec ? onRecAudio : offRecAudio}>녹음</Button>
+        <Button variant="contained" color="success" onClick={onSubmitAudioFile}>녹음 확인</Button>
+        <Button variant="contained" color="secondary">유사도 비교</Button>
+      </div>
       <audio ref={setAudioElement} controls /> {/* 오디오 요소 추가 */}
     </>
   );

@@ -13,7 +13,7 @@ const FileList = () => {
             <Header />
             
             <Box sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
-            <TextField id="outlined-basic" label="검색" variant="outlined" sx={{marginTop:2}} />
+            <TextField id="outlined-basic" size="medium" variant="outlined" sx={{marginTop:2}} ></TextField>
                 <SearchIcon fontSize='large'/>
             </Box>
             
